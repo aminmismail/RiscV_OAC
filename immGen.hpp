@@ -1,18 +1,19 @@
 #ifndef IMMGEN_HPP
 #define IMMGEN_HPP
 
-// Unidade responsável por decodificar o valor Immadiate
+// Decodifica o valor immediate
 class ImmGen {
 private:
-    // Armazena o valor de Immediate
+    // Armazena o valor de immediate
     int output;
 
 public:
     // Construtor da classe
 	ImmGen();
-    // Gera o Immediate a partir da instrução
-	// Requer a intrução
+
+    // Gera o immediate a partir da instrução
     void executa(int input);
+
     // Retorna o valor de PCoutput
     int getOutput();
 };

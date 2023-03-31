@@ -1,11 +1,11 @@
 #ifndef CONTROL_HPP
 #define CONTROL_HPP
 
-// Unidade responsável por definir os sinais de controle
+// definie os sinais de controle
 class Control {
 
 private:
-    // Cada variável armazena o valor do sinal de controle de mesmo nome
+    // Cada variável guarda o valor de um sinal de controle
 	int Branch;
 	int MemRead;
 	int MemToReg;
@@ -17,15 +17,17 @@ private:
 public:
     // Construtor da classe
 	Control();
-    // Define o valor dos sinais com base na instrução que foi passada
+
+    // Define o valor dos sinais com base na instrução
 	void executa(int input);
-    // As funções abaixo retornam o valor das variáveis
+
+    //Retornam o valor das variáveis
 	int getBranch();
-	int getMemRead();
-	int getMemToReg();
 	int getAluOp();
+    int getAluSrc();
+    int getMemRead();
+    int getMemToReg();
 	int getMemWrite();
-	int getAluSrc();
 	int getRegWrite();
 };
 

@@ -10,8 +10,7 @@ void Registers::executa(int ReadReg1, int ReadReg2) {
 	this->readData2 = this->memory[ReadReg2];
 }
 
-// Escreve um dado a um regitrado se a flag for 1
-// Requer o registrador a ser escritor, o dado e a flag
+// Escreve um dado a um regitrador se a flag for 1
 void Registers::executa(int WriteReg, int WriteData, int RegWrite) {
 	if(RegWrite){
 		this->memory[WriteReg] = WriteData;

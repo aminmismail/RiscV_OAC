@@ -4,48 +4,37 @@
 
 #include "PC.hpp"
 #include "adder.hpp"
-#include "instructionMemory.hpp"
+#include "instructionMem.hpp"
 #include "control.hpp"
 #include "mux.hpp"
 #include "registers.hpp"
 #include "immGen.hpp"
 #include "aluControl.hpp"
 #include "alu.hpp"
-#include "dataMemory.hpp"
+#include "dataMem.hpp"
 
-// Classe que simulara o processador da máquina virtual
-// Essa classe posuirá cada uma das unidades necessárias
+// simula o processador da máquina virtual
 class Processador{
 public:
-    /* Todas as unidades presentes na arquitetura RISC-V monociclo
-     *
-     * adder1 é o adder que soma o valor de pc com 4
-     * adder2 soma pc com o immediate
-     *
-     * mux1 é o que está entre registers e a alu, escolhe a fonte dos dados da alu
-     * mux2 é o que utiliza o valor de zero e escolhe se vai fazer branch
-     * mux3 é o que escolhe qual dos somadores será retornado para o pc
-     * mux4 é o que está após a memória de dados, escolhe entre dados da memória ou da alu
-     */
 	PC *pc = new PC();
-	Adder *adder1 = new Adder();
+	Adder *adder1 = new Adder(); //adder1 soma o valor pc+4
 	InstructionMemory *instructionMemory = new InstructionMemory();
 	Control *control = new Control();
 	Registers *registers = new Registers();
 	ImmGen *immgen = new ImmGen();
-	MUX *mux1 = new MUX();
-	Adder *adder2 = new Adder();
+	MUX *mux1 = new MUX(); //escolhe a fonte dos dados da alu
+	Adder *adder2 = new Adder(); //adder2 soma pc com imm
 	ALU *alu = new ALU();
 	ALUControl *aluControl = new ALUControl();
-	MUX *mux2 = new MUX();
-	MUX *mux3 = new MUX();
-	DataMemory *dataMemory = new DataMemory();
-	MUX *mux4 = new MUX();
+	MUX *mux2 = new MUX(); //utiliza o valor de zero e escolhe se vai fazer branch ou nao
+	MUX *mux3 = new MUX(); //escolhe qual dos somadores será retornado para o pc
+	DataMem *dataMemory = new DataMem();
+	MUX *mux4 = new MUX(); //escolhe entre os dados da memória ou da alu
 
 public:
 	Processador();
+
     // Passa para a InstructionMemory as instruções lidas do arquivo
-    // Requer um vetor de inteiros com as instruções
 	void inicializa(unsigned int *instructionMemoryRef);
 
     // Executa um clock

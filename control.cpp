@@ -4,12 +4,12 @@
 // Construtor padrão da classe
 Control::Control() = default;
 
-// Define o valor dos sinais com base na instrução que foi passada
+// Define o valor dos sinais de controle com base na instrução
 void Control::executa(int input) {
     switch (input) {
-        // Instruções do Tipo R
+        // Tipo R
         case 51:
-            std::cout << "      Instrução do Tipo R" << std::endl;
+            std::cout << "Instrução do Tipo R" << std::endl;
             this->Branch = 0;
             this->MemRead = 0;
             this->MemToReg = 0;
@@ -19,7 +19,7 @@ void Control::executa(int input) {
             this->RegWrite = 1;
             break;
 
-        // Instrução ADDI
+        // ADDI
         case 19:
             std::cout << "      Instrução ADDI" << std::endl;
             this->Branch = 0;
@@ -31,7 +31,7 @@ void Control::executa(int input) {
             this->RegWrite = 1;
             break;
 
-        // Instrução LW
+        //  LW
         case 3:
             std::cout << "      Instrução LW" << std::endl;
             this->Branch = 0;
@@ -43,7 +43,7 @@ void Control::executa(int input) {
             this->RegWrite = 1;
             break;
 
-        // Instrução SW
+        //  SW
         case 35:
             std::cout << "      Instrução SW" << std::endl;
             this->Branch = 0;
@@ -55,7 +55,7 @@ void Control::executa(int input) {
             this->RegWrite = 0;
             break;
 
-        // Instrução do Tipo B
+        // Tipo B
         case 99:
             std::cout << "      Instrução do Tipo B" << std::endl;
             this->Branch = 1;
@@ -69,7 +69,7 @@ void Control::executa(int input) {
     }
 }
 
-// As funções abaixo retornam o valor das variáveis
+//retornam o valor dos sinais de controle
 int Control::getBranch(){ return Branch; }
 
 int Control::getMemRead(){ return MemRead; }
