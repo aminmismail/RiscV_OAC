@@ -5,9 +5,10 @@
 class InstructionMemory {
 private:
     // armazena as instruções como inteiros
-	unsigned int *memory;
+    unsigned int *memory;
+
     // Instrucao a ser executada nesse clock
-	int instruction;
+    int instruction;
 
 public:
     // Construtor da classe

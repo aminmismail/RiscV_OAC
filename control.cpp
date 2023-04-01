@@ -19,7 +19,7 @@ void Control::executa(int input) {
             this->RegWrite = 1;
             break;
 
-        // ADDI
+            // ADDI
         case 19:
             std::cout << "Instrucao ADDI" << std::endl;
             this->Branch = 0;
@@ -31,7 +31,7 @@ void Control::executa(int input) {
             this->RegWrite = 1;
             break;
 
-        //  LW
+            //  LW
         case 3:
             std::cout << "Instrucao LW" << std::endl;
             this->Branch = 0;
@@ -43,7 +43,7 @@ void Control::executa(int input) {
             this->RegWrite = 1;
             break;
 
-        //  SW
+            //  SW
         case 35:
             std::cout << "Instrucao SW" << std::endl;
             this->Branch = 0;
@@ -55,7 +55,7 @@ void Control::executa(int input) {
             this->RegWrite = 0;
             break;
 
-        // Tipo B
+            // Tipo B
         case 99:
             std::cout << "Instrucao do Tipo B" << std::endl;
             this->Branch = 1;
@@ -70,30 +70,30 @@ void Control::executa(int input) {
 }
 
 //retornam o valor dos sinais de controle
-int Control::getBranch(){
+int Control::getBranch() {
     return Branch;
 }
 
-int Control::getMemRead(){
+int Control::getMemRead() {
     return MemRead;
 }
 
-int Control::getMemToReg(){
+int Control::getMemToReg() {
     return MemToReg;
 }
 
-int Control::getAluOp(){
+int Control::getAluOp() {
     return ALUOp;
 }
 
-int Control::getMemWrite(){
+int Control::getMemWrite() {
     return MemWrite;
 }
 
-int Control::getAluSrc(){
+int Control::getAluSrc() {
     return ALUSrc;
 }
 
-int Control::getRegWrite(){
+int Control::getRegWrite() {
     return RegWrite;
 }

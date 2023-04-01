@@ -5,7 +5,7 @@ Adder::Adder() = default;
 
 // Executa a soma
 void Adder::executa(int inputA, int inputB) {
-	this->output = inputA + inputB;
+    this->output = inputA + inputB;
 }
 
 // Retorna o valor de output

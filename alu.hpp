@@ -5,23 +5,23 @@
 class ALU {
 private:
     // Armazena o resultado da operação
-	int output;
+    int output;
 
     // Armazena se o resultado foi 0 ou não
-	int zero;
+    int zero;
 
 public:
     // Construtor da classe
-	ALU();
+    ALU();
 
     // Executa a operação informada por inputControl em inputA e inputB
-	void executa(int inputA, int inputB, int inputControl);
+    void executa(int inputA, int inputB, int inputControl);
 
     // Retorna o valor de PCoutput
-	int getOutput();
+    int getOutput();
 
     // Retorna o valor da flag zero
-	int getZero();
+    int getZero();
 };
 
 

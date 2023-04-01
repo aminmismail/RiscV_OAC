@@ -9,13 +9,13 @@ private:
 
 public:
     // Construtor da classe
-	MUX();
+    MUX();
 
     // Escolhe entre o inputA e o inputB com base no valor de inputControl
-	void executa(int inputA, int inputB, int inputContol);
+    void executa(int inputA, int inputB, int inputContol);
 
     // Retorna o valor de output
-	int getOutput();
+    int getOutput();
 };
 
 #endif //MULTIPLEXER_HPP

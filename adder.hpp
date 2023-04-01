@@ -5,17 +5,18 @@
 class Adder {
 private:
     // Armazena o resultado da soma
-	int output;
+    int output;
 
 public:
     // Construtor da classe
-	Adder();
+    Adder();
+
     // Função que executa a soma
     // O resultado é armazenado na variável output
-	void executa(int inputA, int inputB);
+    void executa(int inputA, int inputB);
 
     // Retorna o output
-	int getOutput();
+    int getOutput();
 };
 
 #endif //ADDER_HPP

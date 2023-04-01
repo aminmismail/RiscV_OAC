@@ -9,7 +9,7 @@ VM::VM(char *path) {
 
     // Abre o arquivo com as instruções
     FILE *f = fopen(path, "r");
-    if (f == nullptr){ //Em caso de falha
+    if (f == nullptr) { //Em caso de falha
         std::cout << "Falha ao ler arquivo !" << std::endl;
         exit(1);
     }
@@ -22,6 +22,7 @@ VM::VM(char *path) {
     for (i = 0; !feof(f); i++) {
         fgets(buff, 255, f);
         instrucoes[i] = lerInstrucao(buff);
+        printf("Instrucao [%d]: 0x%08x\n", i, instrucoes[i]);
     }
 
     // Passa as instruções para o processador

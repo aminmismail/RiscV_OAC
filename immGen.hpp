@@ -9,7 +9,7 @@ private:
 
 public:
     // Construtor da classe
-	ImmGen();
+    ImmGen();
 
     // Gera o immediate a partir da instrução
     void executa(int input);

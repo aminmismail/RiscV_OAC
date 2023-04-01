@@ -1,5 +1,6 @@
 #ifndef VM_HPP
 #define VM_HPP
+
 #include "processador.hpp"
 
 // representa a máquina virtual

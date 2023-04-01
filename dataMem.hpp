@@ -8,20 +8,20 @@ private:
     unsigned char memory[65536] = {0};
 
     //armazena o valor da memória que foi lido
-	int readData;
+    int readData;
 
 public:
     // Construtor da classe
-	DataMem();
+    DataMem();
 
     // Executa a leitura e escrita na memória
-	void executa(int address, int writeData, int memRead, int memWrite);
+    void executa(int address, int writeData, int memRead, int memWrite);
 
-	// Retorna o valor de ReadData
+    // Retorna o valor de ReadData
     int getReadData();
 
     // Retorna toda a memória
-	const unsigned char *getMemory() const;
+    const unsigned char *getMemory() const;
 };
 
 #endif //DATAMEM_HPP
