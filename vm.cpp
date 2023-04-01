@@ -31,10 +31,10 @@ VM::VM(char *path) {
 // Realiza o clock
 void VM::clock() {
     processador->executa();
-    std::cout << "                  Registradores                  \n";
+    std::cout << "Registradores\n";
 
     processador->printRegistradores();
-    std::cout << "                     Memoria                     \n";
+    std::cout << "\nMemoria\n";
 
     processador->printMemoria();
     std::cout << std::endl << std::endl;
