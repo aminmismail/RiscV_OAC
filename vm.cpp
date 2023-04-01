@@ -19,7 +19,7 @@ VM::VM(char *path) {
     char buff[255];
 
     // Lê as instrucoes
-    for (i = 0; !feof(f); i++) {
+    for (i = 0; !feof(f); i+=4) {
         fgets(buff, 255, f);
         instrucoes[i] = lerInstrucao(buff);
         printf("Instrucao [%d]: 0x%08x\n", i, instrucoes[i]);
