@@ -4,7 +4,6 @@
 ALU::ALU() = default;
 
 // Executa a operação informada por inputControl em inputA e inputB
-// O resultado é armazenado na variável output da classe
 void ALU::executa(int inputA, int inputB, int inputControl) {
 	switch(inputControl){
 		case 0:

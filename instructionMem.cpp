@@ -20,7 +20,7 @@ int InstructionMemory::getInstruction(){
 // Define o valor da instrução com base na memoria
 void InstructionMemory::executa(int input){
     this->instruction = this->memory[input];
-	    if(this->instruction == 0){
+	    if(!this->instruction){
 		    std::cout << "\nPrograma encerrado!\n";
 		    exit(0);
 	}
