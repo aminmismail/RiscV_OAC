@@ -9,7 +9,7 @@ void Control::executa(int input) {
     switch (input) {
         // Tipo R
         case 51:
-            std::cout << "Instrução do Tipo R" << std::endl;
+            std::cout << "Instrucao do Tipo R" << std::endl;
             this->Branch = 0;
             this->MemRead = 0;
             this->MemToReg = 0;
@@ -21,7 +21,7 @@ void Control::executa(int input) {
 
         // ADDI
         case 19:
-            std::cout << "      Instrução ADDI" << std::endl;
+            std::cout << "Instrucao ADDI" << std::endl;
             this->Branch = 0;
             this->MemRead = 0;
             this->MemToReg = 0;
@@ -33,7 +33,7 @@ void Control::executa(int input) {
 
         //  LW
         case 3:
-            std::cout << "      Instrução LW" << std::endl;
+            std::cout << "Instrucao LW" << std::endl;
             this->Branch = 0;
             this->MemRead = 1;
             this->MemToReg = 1;
@@ -45,7 +45,7 @@ void Control::executa(int input) {
 
         //  SW
         case 35:
-            std::cout << "      Instrução SW" << std::endl;
+            std::cout << "Instrucao SW" << std::endl;
             this->Branch = 0;
             this->MemRead = 0;
             this->MemToReg = 0;
@@ -57,7 +57,7 @@ void Control::executa(int input) {
 
         // Tipo B
         case 99:
-            std::cout << "      Instrução do Tipo B" << std::endl;
+            std::cout << "Instrucao do Tipo B" << std::endl;
             this->Branch = 1;
             this->MemRead = 0;
             this->MemToReg = 0;
@@ -70,16 +70,30 @@ void Control::executa(int input) {
 }
 
 //retornam o valor dos sinais de controle
-int Control::getBranch(){ return Branch; }
+int Control::getBranch(){
+    return Branch;
+}
 
-int Control::getMemRead(){ return MemRead; }
+int Control::getMemRead(){
+    return MemRead;
+}
 
-int Control::getMemToReg(){ return MemToReg; }
+int Control::getMemToReg(){
+    return MemToReg;
+}
 
-int Control::getAluOp(){ return ALUOp; }
+int Control::getAluOp(){
+    return ALUOp;
+}
 
-int Control::getMemWrite(){ return MemWrite; }
+int Control::getMemWrite(){
+    return MemWrite;
+}
 
-int Control::getAluSrc(){ return ALUSrc; }
+int Control::getAluSrc(){
+    return ALUSrc;
+}
 
-int Control::getRegWrite(){ return RegWrite; }
+int Control::getRegWrite(){
+    return RegWrite;
+}

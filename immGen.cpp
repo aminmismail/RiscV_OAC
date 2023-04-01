@@ -10,25 +10,21 @@ void ImmGen::executa(int input){
     // Obtem os primeiros 7 bits da instrução para o opcode
 	int opcode = input & 127;
 
-    // Dependendo o tipo da intrução há formas diferentes de gerar o Opcode
 	switch(opcode){
         // Caso seja ADDI
 		case 19:
-			std::cout << "Instrução ADDI" << std::endl;
 			output = (input >> 20);
 			if(output >> 11) output += 0xFFFFF000;
 			break;
 
         // Caso seja LW
 		case 3:
-			std::cout << "Instrução LW" << std::endl;
 			output = (input >> 20);
 			if(output >> 11) output += 0xFFFFF000;
 			break;
 
         // Caso seja SW
 		case 35:{
-			std::cout << "Instrução SW" << std::endl;
 			int aux1 = (input >> 7) & 31;
 			int aux2 = (input >> 20) & 4064;
 			output = aux2 + aux1;
@@ -37,7 +33,6 @@ void ImmGen::executa(int input){
 
         // Caso seja Tipo B
 		case 99: {
-			std::cout << "Instrução do Tipo B" << std::endl;
 			int aux1 = (input >> 7) & 30;
 			int aux2 = (input >> 20) & 2016;
 			int aux3 = (input << 4) & 2048;
